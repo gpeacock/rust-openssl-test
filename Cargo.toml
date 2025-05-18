@@ -1,0 +1,8 @@
+[package]
+name = "rust-openssl-test"
+version = "0.1.0"
+authors = ["Gavin Peacock <gpeacock@adobe.com>"]
+edition = "2021"
+
+[dependencies]
+openssl = { version = "0.10.60", features = ["vendored"] }
