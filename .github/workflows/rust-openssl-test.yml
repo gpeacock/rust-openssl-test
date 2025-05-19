@@ -23,18 +23,7 @@ jobs:
       run: |
         ./setup-rust-openssl.ps1
       
-    - name: Build with Cargo
-      run: |
-        cargo build --verbose
-      env:
-        OPENSSL_DIR: C:\OpenSSL
-        OPENSSL_LIB_DIR: C:\OpenSSL\lib
-        OPENSSL_INCLUDE_DIR: C:\OpenSSL\include
-    
+
     - name: Run tests
       run: |
-        cargo test --verbose
-      env:
-        OPENSSL_DIR: C:\OpenSSL
-        OPENSSL_LIB_DIR: C:\OpenSSL\lib
-        OPENSSL_INCLUDE_DIR: C:\OpenSSL\include
+        cargo test 
