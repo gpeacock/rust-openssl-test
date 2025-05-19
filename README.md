@@ -1,6 +1,7 @@
 # Rust OpenSSL Test Project for Windows MSVC and others
 
 This is a simple Rust project that tests the OpenSSL build process on Windows using the MSVC toolchain in a GitHub Actions workflow.
+I've found it very frustrating getting openssl to build reliably on Windows in scripted environments like github actions and powershell, so this provides a powershell script that does the setup for both environments.
 
 ## Features
 
@@ -10,11 +11,12 @@ This is a simple Rust project that tests the OpenSSL build process on Windows us
 - Attempts a TLS connection
 - Includes GitHub Actions workflow for CI
 
-## Setup
+## Setup on Windows
 
-1. Clone this repository
+1. Install Git and Clone this repository
 2. Ensure you have Rust and Visual Studio installed on your development machine
-3. Run the setup script to build OpenSSL:
+3. Enable Powershell to run scripts (admin terminal with ``` Set-ExecutionPolicy RemoteSigned```)
+3. Run the setup script in powershell:
 
 ```powershell
 .\setup-rust-openssl.ps1
@@ -25,7 +27,7 @@ This is a simple Rust project that tests the OpenSSL build process on Windows us
 ```bash
 cargo build
 cargo run
-```
+``` 
 
 ## Testing
 
